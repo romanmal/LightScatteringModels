@@ -19,11 +19,16 @@ Dev/test: pytest
 
 ## Usage example 1:
 from ld_model import wavelength_nm_to_ev, lorentz_drude_epsilon, refractive_index_from_eps
+
 import numpy as np
 
+
 ev = wavelength_nm_to_ev(500.0)  # energy in eV for 500 nm
+
 eps = lorentz_drude_epsilon(np.array([ev]))
+
 n, k = refractive_index_from_eps(eps)
+
 print("500 nm -> n, k:", n[0], k[0])
 
 ## Usage example 2:
